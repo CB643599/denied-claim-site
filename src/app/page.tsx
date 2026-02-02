@@ -27,8 +27,6 @@ export default function Home() {
           <a
             className="btn"
             href="/coming-soon"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Get Information
           </a>
