@@ -26,7 +26,7 @@ export default function Home() {
         <div className="cta-row">
           <a
             className="btn"
-            href="https://deniedclaimhelp.org/contact"
+            href="/coming-soon"
             target="_blank"
             rel="noopener noreferrer"
           >
