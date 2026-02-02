@@ -26,7 +26,7 @@ export default function Home() {
         <div className="cta-row">
           <a
             className="btn"
-            href="https://example.com"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -34,6 +34,7 @@ export default function Home() {
           </a>
           <span className="cta-note">No obligation. You decide whether to engage.</span>
         </div>
+        <p className="cta-note">Connection options will be available shortly.</p>
       </section>
 
       <section className="section">
