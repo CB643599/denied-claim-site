@@ -3,7 +3,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Denied Claim Help",
-    url: "https://example.com/",
+    url: "https://deniedclaimhelp.org/",
     description:
       "General information about denied insurance claims. Learn about options and connect with third-party assistance services.",
     about: {
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="cta-row">
           <a
             className="btn"
-            href="#"
+            href="https://deniedclaimhelp.org/contact"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -86,7 +86,7 @@ export default function Home() {
         </p>
         <a
           className="btn btn-secondary"
-          href="https://example.com"
+          href="https://deniedclaimhelp.org/contact"
           target="_blank"
           rel="noopener noreferrer"
         >

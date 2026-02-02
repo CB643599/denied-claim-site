@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://deniedclaimhelp.org"),
   alternates: {
     canonical: "/",
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Insurance Claim Denied? | Denied Claim Help",
     description:
       "General information about denied insurance claims. Learn about options and connect with third-party assistance services.",
-    url: "https://example.com",
+    url: "https://deniedclaimhelp.org",
     siteName: "Denied Claim Help",
     locale: "en_US",
     type: "website",
