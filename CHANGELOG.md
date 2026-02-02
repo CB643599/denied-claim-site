@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2026-02-01] - Dependency Update
 
 ### Changed
-- **Next.js Upgrade**: Updated Next.js and eslint-config-next to latest versions for security compliance
+- **Framework Upgrade**: Updated Next.js and React dependencies to latest versions for security compliance
 
 ## [2026-02-01] - Compliance Pages
 
