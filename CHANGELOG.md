@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2026-02-02] - Pages Router Conversion
+
+### Added
+- **Pages Router**: Implemented `/pages` routes for home, coming-soon, privacy, and terms
+- **Global Styles**: Moved global styling to a Pages Router-compatible import
+
+### Changed
+- **Framework Config**: Switched Next.js config to `next.config.js` for Next 14 support
+- **Dependencies**: Pinned Next.js and React versions to stable releases
+- **Vercel Config**: Simplified `vercel.json` for reproducible builds
+
+### Removed
+- **App Router**: Deleted `/src/app` and removed App Router usage
+
+## [2026-02-02] - Dependency Alignment
+
+### Changed
+- **Supported Versions**: Aligned Next.js, React, and type packages to stable supported versions
+
 ## [2026-02-01] - Dependency Update
 
 ### Changed
