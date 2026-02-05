@@ -62,6 +62,10 @@ export default function ContactPage() {
             Submit your information to request general information and optional referral
             connections.
           </p>
+          <p className="cta-note">
+            What happens next: We review your request and, if appropriate, share general
+            information or connect you with an independent third-party service.
+          </p>
         </section>
 
         {status === "success" ? (
@@ -74,16 +78,19 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} aria-live="polite">
               <div>
                 <label htmlFor="firstName">First Name *</label>
+                <span className="cta-note">So we can address you correctly.</span>
                 <input id="firstName" name="firstName" type="text" required />
               </div>
 
               <div>
                 <label htmlFor="email">Email Address *</label>
+                <span className="cta-note">Used to send requested information.</span>
                 <input id="email" name="email" type="email" required />
               </div>
 
               <div>
                 <label htmlFor="claimType">Claim Type *</label>
+                <span className="cta-note">Helps route your request appropriately.</span>
                 <select id="claimType" name="claimType" required defaultValue="">
                   <option value="" disabled>
                     Select a claim type
@@ -98,6 +105,7 @@ export default function ContactPage() {
 
               <div>
                 <label htmlFor="description">Brief description (optional)</label>
+                <span className="cta-note">Optional context to better understand your situation.</span>
                 <textarea id="description" name="description" rows={4} />
               </div>
 
@@ -105,6 +113,10 @@ export default function ContactPage() {
                 {status === "submitting" ? "Submitting..." : "Submit"}
               </button>
 
+              <p className="cta-note">
+                Your information is used to respond to this request and for referral coordination
+                only.
+              </p>
               <p className="cta-note">
                 This form collects information for general informational and referral purposes
                 only. No insurance or legal advice is provided.
