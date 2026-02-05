@@ -14,7 +14,19 @@ export default async function handler(
     return res.status(405).json({ ok: false, message: "Method not allowed." });
   }
 
-  const { firstName, email, claimType, description, sourceUrl } = req.body ?? {};
+  const {
+    firstName,
+    email,
+    claimType,
+    description,
+    sourceUrl,
+    sourceDomain,
+    pagePath,
+    referrer,
+    utm_source,
+    utm_campaign,
+    utm_medium,
+  } = req.body ?? {};
 
   for (const field of requiredFields) {
     if (!req.body?.[field]) {
@@ -43,6 +55,7 @@ export default async function handler(
   });
 
   const timestamp = new Date().toISOString();
+  const userAgent = req.headers["user-agent"] || "N/A";
   const toAddress = "info@sybohsolutions.com";
 
   const text = [
@@ -53,6 +66,13 @@ export default async function handler(
     `Claim Type: ${claimType}`,
     `Brief Description: ${description || "N/A"}`,
     `Source URL: ${sourceUrl || "N/A"}`,
+    `Lead Source Domain: ${sourceDomain || "N/A"}`,
+    `Page Path: ${pagePath || "N/A"}`,
+    `Referrer: ${referrer || "N/A"}`,
+    `User Agent: ${userAgent}`,
+    `UTM Source: ${utm_source || "N/A"}`,
+    `UTM Campaign: ${utm_campaign || "N/A"}`,
+    `UTM Medium: ${utm_medium || "N/A"}`,
     `Timestamp: ${timestamp}`,
   ].join("\n");
 

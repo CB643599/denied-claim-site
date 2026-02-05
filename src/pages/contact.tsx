@@ -14,7 +14,14 @@ export default function ContactPage() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append("sourceUrl", window.location.href);
+    const url = new URL(window.location.href);
+    formData.append("sourceUrl", url.href);
+    formData.append("sourceDomain", url.hostname);
+    formData.append("pagePath", url.pathname);
+    formData.append("referrer", document.referrer || "");
+    formData.append("utm_source", url.searchParams.get("utm_source") || "");
+    formData.append("utm_campaign", url.searchParams.get("utm_campaign") || "");
+    formData.append("utm_medium", url.searchParams.get("utm_medium") || "");
 
     try {
       const response = await fetch("/api/contact", {
