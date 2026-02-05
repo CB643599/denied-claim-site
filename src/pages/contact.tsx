@@ -56,13 +56,15 @@ export default function ContactPage() {
         />
       </Head>
       <main className="page">
-        <section className="section">
-          <h1>Contact</h1>
-          <p>
-            Submit your information to request general information and optional referral
-            connections.
-          </p>
-        </section>
+        {status !== "success" && (
+          <section className="section">
+            <h1>Contact</h1>
+            <p>
+              Submit your information to request general information and optional referral
+              connections.
+            </p>
+          </section>
+        )}
 
         {status === "success" ? (
           <section className="section">
