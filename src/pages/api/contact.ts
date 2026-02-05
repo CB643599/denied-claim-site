@@ -26,12 +26,17 @@ export default async function handler(
     utm_source,
     utm_campaign,
     utm_medium,
+    company,
   } = req.body ?? {};
 
   for (const field of requiredFields) {
     if (!req.body?.[field]) {
       return res.status(400).json({ ok: false, message: "Missing required fields." });
     }
+  }
+
+  if (company) {
+    return res.status(200).json({ ok: true });
   }
 
   const smtpHost = process.env.SMTP_HOST;

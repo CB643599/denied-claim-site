@@ -73,6 +73,14 @@ export default function ContactPage() {
           <section className="section">
             <div className="form-card">
               <form onSubmit={handleSubmit} aria-live="polite" className="form">
+                <input
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="honeypot"
+                />
                 <div className="form-field">
                   <label htmlFor="firstName">First Name *</label>
                   <span className="field-hint">So we can address you correctly.</span>
