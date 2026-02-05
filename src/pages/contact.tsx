@@ -62,10 +62,6 @@ export default function ContactPage() {
             Submit your information to request general information and optional referral
             connections.
           </p>
-          <p className="cta-note">
-            What happens next: We review your request and, if appropriate, share general
-            information or connect you with an independent third-party service.
-          </p>
         </section>
 
         {status === "success" ? (
@@ -75,59 +71,72 @@ export default function ContactPage() {
           </section>
         ) : (
           <section className="section">
-            <form onSubmit={handleSubmit} aria-live="polite">
-              <div>
-                <label htmlFor="firstName">First Name *</label>
-                <span className="cta-note">So we can address you correctly.</span>
-                <input id="firstName" name="firstName" type="text" required />
-              </div>
+            <div className="form-card">
+              <form onSubmit={handleSubmit} aria-live="polite" className="form">
+                <div className="form-field">
+                  <label htmlFor="firstName">First Name *</label>
+                  <span className="field-hint">So we can address you correctly.</span>
+                  <input id="firstName" name="firstName" type="text" required />
+                </div>
 
-              <div>
-                <label htmlFor="email">Email Address *</label>
-                <span className="cta-note">Used to send requested information.</span>
-                <input id="email" name="email" type="email" required />
-              </div>
+                <div className="form-field">
+                  <label htmlFor="email">Email Address *</label>
+                  <span className="field-hint">Used to send requested information.</span>
+                  <input id="email" name="email" type="email" required />
+                </div>
 
-              <div>
-                <label htmlFor="claimType">Claim Type *</label>
-                <span className="cta-note">Helps route your request appropriately.</span>
-                <select id="claimType" name="claimType" required defaultValue="">
-                  <option value="" disabled>
-                    Select a claim type
-                  </option>
-                  <option value="Medical">Medical</option>
-                  <option value="Auto">Auto</option>
-                  <option value="Property/Home">Property/Home</option>
-                  <option value="Disability">Disability</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
+                <div className="form-field">
+                  <label htmlFor="claimType">Claim Type *</label>
+                  <span className="field-hint">Helps route your request appropriately.</span>
+                  <select id="claimType" name="claimType" required defaultValue="">
+                    <option value="" disabled>
+                      Select a claim type
+                    </option>
+                    <option value="Medical">Medical</option>
+                    <option value="Auto">Auto</option>
+                    <option value="Property/Home">Property/Home</option>
+                    <option value="Disability">Disability</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
 
-              <div>
-                <label htmlFor="description">Brief description (optional)</label>
-                <span className="cta-note">Optional context to better understand your situation.</span>
-                <textarea id="description" name="description" rows={4} />
-              </div>
+                <div className="form-field">
+                  <label htmlFor="description">Brief description (optional)</label>
+                  <span className="field-hint">Optional context to better understand your situation.</span>
+                  <textarea id="description" name="description" rows={4} />
+                </div>
 
-              <button className="btn" type="submit" disabled={status === "submitting"}>
-                {status === "submitting" ? "Submitting..." : "Submit"}
-              </button>
+                <button className="btn" type="submit" disabled={status === "submitting"}>
+                  {status === "submitting" ? "Submitting..." : "Submit"}
+                </button>
 
-              <p className="cta-note">
-                Your information is used to respond to this request and for referral coordination
-                only.
-              </p>
-              <p className="cta-note">
-                This form collects information for general informational and referral purposes
-                only. No insurance or legal advice is provided.
-              </p>
-
-              {status === "error" && (
-                <p className="cta-note" role="alert">
-                  {errorMessage}
+                <p className="cta-note">
+                  Your information is used to respond to this request and for referral coordination
+                  only.
                 </p>
-              )}
-            </form>
+                <p className="cta-note">
+                  This form collects information for general informational and referral purposes
+                  only. No insurance or legal advice is provided.
+                </p>
+
+                {status === "error" && (
+                  <p className="cta-note" role="alert">
+                    {errorMessage}
+                  </p>
+                )}
+              </form>
+            </div>
+
+            <section className="section form-next">
+              <h2>What happens next</h2>
+              <p>
+                We review your request and, if appropriate, share general information or connect
+                you with an independent third-party service. Participation is optional.
+              </p>
+              <p className="cta-note">
+                We do not provide insurance or legal advice, and no outcomes are guaranteed.
+              </p>
+            </section>
           </section>
         )}
       </main>
