@@ -177,6 +177,16 @@ h1 {
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
 }
 
+.form-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.form-subtitle {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
 .form {
   display: flex;
   flex-direction: column;

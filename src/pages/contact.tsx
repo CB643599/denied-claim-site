@@ -56,24 +56,30 @@ export default function ContactPage() {
         />
       </Head>
       <main className="page">
-        {status !== "success" && (
-          <section className="section">
-            <h1>Contact</h1>
-            <p>
-              Submit your information to request general information and optional referral
-              connections.
-            </p>
-          </section>
-        )}
-
         {status === "success" ? (
           <section className="section">
-            <h2>Thank you</h2>
-            <p>Your information was received. We will review it and follow up as appropriate.</p>
+            <div className="form-card">
+              <h2 className="form-title">Thank you</h2>
+              <p className="form-subtitle">
+                Your information was received. We will review it and follow up as appropriate.
+              </p>
+              <h3 className="form-subtitle">What happens next</h3>
+              <ul className="list">
+                <li>Review of your request</li>
+                <li>Optional follow-up or referral if appropriate</li>
+                <li>No guarantees and no obligation</li>
+              </ul>
+              <p className="cta-note">You may close this tab now.</p>
+            </div>
           </section>
         ) : (
           <section className="section">
             <div className="form-card">
+              <h2 className="form-title">Contact</h2>
+              <p className="form-subtitle">
+                Submit your information to request general information and optional referral
+                connections.
+              </p>
               <form onSubmit={handleSubmit} aria-live="polite" className="form">
                 <input
                   type="text"
