@@ -20,7 +20,7 @@ export default function HomePage() {
             not promise outcomes or guarantee approvals.
           </p>
           <div className="cta-row">
-            <a className="btn" href="/coming-soon">
+            <a className="btn" href="/contact">
               Get Information
             </a>
             <span className="cta-note">No obligation. You decide whether to engage.</span>
@@ -72,7 +72,7 @@ export default function HomePage() {
             If you would like to learn about third-party services that may assist with
             administrative steps, you can request information below.
           </p>
-          <a className="btn btn-secondary" href="/coming-soon">
+          <a className="btn btn-secondary" href="/contact">
             Learn About Options
           </a>
         </section>
